@@ -1,39 +1,3 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:es.sh.appdescription="http://eclipsesource.com/smarthome/core/model/appdescription">
-  <es.sh.appdescription:App xmi:id="com.eclipsesource.apps.munich.office.poweron_0.8.0.201708251656.jar" id="com.eclipsesource.apps.munich.office.poweron" description="App that powers on a room." name="Power On Office" icon="icons/home.png" author="Johannes Faltermeier" bundle="com.eclipsesource.apps.munich.office.poweron" className="com.eclipsesource.apps.munich.office.poweron.App">
-    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_2AhvEYmlEeejQLJyImXmVQ" id="doorSensor" description="Represents a door sensor that indicates whether a door is open (true) or not (false)." name="Door Sensor">
-      <tags>Door</tags>
-    </requiredStates>
-    <requiredStates xsi:type="es.sh.appdescription:DateTimeState" xmi:id="_2AhvEomlEeejQLJyImXmVQ" id="time" description="The current time and related utilities." name="The time." type="Framework">
-      <tags>Time</tags>
-    </requiredStates>
-    <requiredActors xsi:type="es.sh.appdescription:OnOffActor" xmi:id="_2AhvE4mlEeejQLJyImXmVQ" id="powerSupply" description="Represents a power supply that can be turned on (true) or off (false)." name="Power Supply" multiple="true">
-      <tags>PowerOutlet</tags>
-    </requiredActors>
-  </es.sh.appdescription:App>
-  <es.sh.appdescription:App xmi:id="com.eclipsesource.apps.munich.office.poweroff_0.8.0.201708251656.jar" id="com.eclipsesource.apps.munich.office.poweroff" description="Turning off power, notifying about open windows and locking door." name="Leaving Office App" icon="icons/home.png" author="Johannes Faltermeier" bundle="com.eclipsesource.apps.munich.office.poweroff" className="com.eclipsesource.apps.munich.office.poweroff.App">
-    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_2AmnkYmlEeejQLJyImXmVQ" id="remote" description="Represents remote controls that can be on (true) or off (false)." name="Remote Control(s)" multiple="true">
-      <tags>Button</tags>
-      <tags>Remote</tags>
-    </requiredStates>
-    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_2AmnkomlEeejQLJyImXmVQ" id="window" description="Represents windows that can be open (true) or shut (false)." name="Window(s)" multiple="true" requiresName="true">
-      <tags>Window</tags>
-    </requiredStates>
-    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_2Amnk4mlEeejQLJyImXmVQ" id="doorSensor" description="Represents a door sensor that indicates whether a door is open (true) or not (false)." name="Door Sensor">
-      <tags>Door</tags>
-    </requiredStates>
-    <requiredStates xsi:type="es.sh.appdescription:DateTimeState" xmi:id="_2AmnlImlEeejQLJyImXmVQ" id="time" description="The current time and related utilities." name="Time" type="Framework">
-      <tags>Time</tags>
-    </requiredStates>
-    <requiredActors xsi:type="es.sh.appdescription:OnOffActor" xmi:id="_2AmnlYmlEeejQLJyImXmVQ" id="alarm" description="Represents an alarm that can be on (true) or off (false)." name="Alarm(s)" multiple="true">
-      <tags>Alarm</tags>
-    </requiredActors>
-    <requiredActors xsi:type="es.sh.appdescription:LockUnlockActor" xmi:id="_2AmnlomlEeejQLJyImXmVQ" id="door" description="Represents doors that can be unlocked (true) or locked (false)." name="Door(s)">
-      <tags>Door</tags>
-      <tags>Lock</tags>
-    </requiredActors>
-    <requiredActors xsi:type="es.sh.appdescription:OnOffActor" xmi:id="_2Amnl4mlEeejQLJyImXmVQ" id="powerSupply" description="Represents a power supply that can be turned on (true) or off (false)." name="Power Supply" multiple="true">
-      <tags>PowerOutlet</tags>
-    </requiredActors>
-  </es.sh.appdescription:App>
 </xmi:XMI>
