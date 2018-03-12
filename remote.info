@@ -1,3 +1,73 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:es.sh.appdescription="http://eclipsesource.com/smarthome/core/model/appdescription">
+  <es.sh.appdescription:App xmi:id="com.eclipsesource.apps.munich.office.poweron_0.8.0.201803121410.jar" id="com.eclipsesource.apps.munich.office.poweron" description="App that powers on a room." name="Power On Office" icon="icons/home.png" author="Johannes Faltermeier" bundle="com.eclipsesource.apps.munich.office.poweron" className="com.eclipsesource.apps.munich.office.poweron.App">
+    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_25gVwSX2EeieXYKgcGD4vA" id="doorSensor" description="Represents a door sensor that indicates whether a door is open (true) or not (false)." name="Door Sensor">
+      <tags>Door</tags>
+    </requiredStates>
+    <requiredStates xsi:type="es.sh.appdescription:DateTimeState" xmi:id="_25gVwiX2EeieXYKgcGD4vA" id="time" description="The current time and related utilities." name="The time." type="Framework">
+      <tags>Time</tags>
+    </requiredStates>
+    <requiredActors xsi:type="es.sh.appdescription:OnOffActor" xmi:id="_25gVwyX2EeieXYKgcGD4vA" id="powerSupply" description="Represents a power supply that can be turned on (true) or off (false)." name="Power Supply" multiple="true">
+      <tags>PowerOutlet</tags>
+    </requiredActors>
+    <requiredActors xsi:type="es.sh.appdescription:OnOffActor" xmi:id="_25gVxCX2EeieXYKgcGD4vA" id="alarm" description="Represents an alarm that can be on (true) or off (false)." name="Alarm(s)" multiple="true">
+      <tags>Alarm</tags>
+    </requiredActors>
+    <requiredParameters xsi:type="es.sh.appdescription:NumberParameter" xmi:id="_25gVxSX2EeieXYKgcGD4vA" name="dontExecuteBefore"/>
+    <requiredParameters xsi:type="es.sh.appdescription:NumberParameter" xmi:id="_25gVxiX2EeieXYKgcGD4vA" name="dontExecuteAfter"/>
+  </es.sh.appdescription:App>
+  <es.sh.appdescription:App xmi:id="com.eclipsesource.apps.munich.office.presence_1.0.0.201803121410.jar" id="com.eclipsesource.apps.munich.office.presence" description="This app provides the presence state for a room based on the state of power adapters." name="Power based Presence App" icon="icons/home.png" author="Johannes Faltermeier" bundle="com.eclipsesource.apps.munich.office.presence" className="com.eclipsesource.apps.munich.office.presence.App">
+    <providedState xsi:type="es.sh.appdescription:BooleanState" xmi:id="_25iK8CX2EeieXYKgcGD4vA" id="isHome" description="Indicates that a person is at home (true)." name="Is Home" type="Virtual">
+      <tags>Button</tags>
+      <tags>Remote</tags>
+    </providedState>
+    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_25iK8SX2EeieXYKgcGD4vA" id="powerSupply" description="Represents a power supply that can be turned on (true) or off (false)." name="Power Supply" multiple="true">
+      <tags>PowerOutlet</tags>
+    </requiredStates>
+  </es.sh.appdescription:App>
+  <es.sh.appdescription:App xmi:id="com.eclipsesource.apps.munich.office.poweroff_0.8.0.201803121410.jar" id="com.eclipsesource.apps.munich.office.poweroff" description="Turning off power, notifying about open windows and locking door." name="Leaving Office App" icon="icons/home.png" author="Johannes Faltermeier" bundle="com.eclipsesource.apps.munich.office.poweroff" className="com.eclipsesource.apps.munich.office.poweroff.App">
+    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_25knMSX2EeieXYKgcGD4vA" id="remote" description="Represents remote controls that can be on (true) or off (false)." name="Remote Control(s)" multiple="true">
+      <tags>Button</tags>
+      <tags>Remote</tags>
+    </requiredStates>
+    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_25knMiX2EeieXYKgcGD4vA" id="window" description="Represents windows that can be open (true) or shut (false)." name="Window(s)" multiple="true" requiresName="true">
+      <tags>Window</tags>
+    </requiredStates>
+    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_25knMyX2EeieXYKgcGD4vA" id="doorSensor" description="Represents a door sensor that indicates whether a door is open (true) or not (false)." name="Door Sensor">
+      <tags>Door</tags>
+    </requiredStates>
+    <requiredStates xsi:type="es.sh.appdescription:DateTimeState" xmi:id="_25knNCX2EeieXYKgcGD4vA" id="time" description="The current time and related utilities." name="Time" type="Framework">
+      <tags>Time</tags>
+    </requiredStates>
+    <requiredActors xsi:type="es.sh.appdescription:OnOffActor" xmi:id="_25knNSX2EeieXYKgcGD4vA" id="alarm" description="Represents an alarm that can be on (true) or off (false)." name="Alarm(s)" multiple="true">
+      <tags>Alarm</tags>
+    </requiredActors>
+    <requiredActors xsi:type="es.sh.appdescription:LockUnlockActor" xmi:id="_25knNiX2EeieXYKgcGD4vA" id="door" description="Represents doors that can be unlocked (true) or locked (false)." name="Door(s)">
+      <tags>Door</tags>
+      <tags>Lock</tags>
+    </requiredActors>
+    <requiredActors xsi:type="es.sh.appdescription:OnOffActor" xmi:id="_25knNyX2EeieXYKgcGD4vA" id="powerSupply" description="Represents a power supply that can be turned on (true) or off (false)." name="Power Supply" multiple="true">
+      <tags>PowerOutlet</tags>
+    </requiredActors>
+  </es.sh.appdescription:App>
+  <es.sh.appdescription:App xmi:id="com.eclipsesource.apps.munich.office.closenotification_1.0.0.201803121410.jar" id="com.eclipsesource.apps.munich.office.closenotification" description="Turns an alarm on once a door closes. " name="Door Close Notification" icon="icons/home.png" author="Johannes Faltermeier" bundle="com.eclipsesource.apps.munich.office.closenotification" className="com.eclipsesource.apps.munich.office.closenotification.App">
+    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_25l1USX2EeieXYKgcGD4vA" id="door" description="Represents doors that can be unlocked (true) or locked (false)." name="Door(s)">
+      <tags>Door</tags>
+      <tags>Lock</tags>
+    </requiredStates>
+    <requiredActors xsi:type="es.sh.appdescription:OnOffActor" xmi:id="_25l1UiX2EeieXYKgcGD4vA" id="alarm" description="Represents an alarm that can be on (true) or off (false)." name="Alarm(s)">
+      <tags>Alarm</tags>
+    </requiredActors>
+  </es.sh.appdescription:App>
+  <es.sh.appdescription:App xmi:id="com.eclipsesource.apps.munich.office.heating_1.0.0.201803121410.jar" id="com.eclipsesource.apps.munich.office.heating" description="Sets temperature based on presence." name="Heating App" icon="icons/home.png" author="Johannes Faltermeier" bundle="com.eclipsesource.apps.munich.office.heating" className="com.eclipsesource.apps.munich.office.heating.App">
+    <requiredStates xsi:type="es.sh.appdescription:BooleanState" xmi:id="_25nDdCX2EeieXYKgcGD4vA" id="isHome" description="Indicates that a person is at home (true)." name="Is Home" type="Virtual">
+      <tags>Button</tags>
+      <tags>Remote</tags>
+    </requiredStates>
+    <requiredActors xsi:type="es.sh.appdescription:HeatingActor" xmi:id="_25nDdSX2EeieXYKgcGD4vA" id="heating" description="Controls the temperature of a heating element." name="Thermostat(s)" multiple="true" defaultValueString="18">
+      <tags>Heating</tags>
+    </requiredActors>
+    <requiredParameters xsi:type="es.sh.appdescription:NumberParameter" xmi:id="_25nDdiX2EeieXYKgcGD4vA" name="temperatureIfPresent"/>
+    <requiredParameters xsi:type="es.sh.appdescription:NumberParameter" xmi:id="_25nDdyX2EeieXYKgcGD4vA" name="temperatureIfAway"/>
+  </es.sh.appdescription:App>
 </xmi:XMI>
